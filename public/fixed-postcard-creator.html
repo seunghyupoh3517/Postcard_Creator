@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment#2 Postcard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Indie+Flower|Long+Cang&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <div id="header">
+        <h1>Daily Postcards Creator</h1>
+    </div>
+    <div id="container">
+
+        <div id="contents_wrap">
+            <div id="postcard_wrap" style="background-color: rgb(230, 226, 207);">
+              <div class="content">
+                  <!-- <img alt="" src="./images/bridge.jpg" id=""> -->
+                  <!-- 이미지 태그 스타일 먹이기 -->
+                  <!-- <input type="file"> -->
+                  <!-- 이미지 태그 스타일 먹이기 -->
+                  <img id="blah"/>
+                  <label id="labelId" for="upload_file">Choose Image</label>
+                  <input type='file' id="upload_file" name="upload_file" visbility="hidden" onchange="imageUpdateAjax(this)"/>
+
+                  <button id="replaceId" type="button" style="display:none;" onclick="triggerUploadFile()">Replace Image</button>
+              </div>
+              <div class="dummyLine"></div>
+              <div class="content">
+                  <textarea id="select_font" style="font-family:Indie Flower;" placeholder="Write Your Message Here!"></textarea>
+              </div>
+
+            </div>
+        </div>
+
+      <div id="edit_wrap">
+          <div id="edit_area">
+            <h2>Choose your font</h2>
+            <ul class="choose_font">
+              <li>
+                  <span style="font-family:Indie Flower; font-size:30px;">Indie Flower</span>
+              </li>
+              <li>
+                <span style="font-family:Dancing Script; font-size:30px;">Dancing Script</span>
+              </li>
+              <li>
+                <span style="font-family:Long Cang; font-size:30px;">Long Cang</span>
+              </li>
+              <li>
+                <span style="font-family:Homemade Apple; font-size:30px;">Homemade Apple</span>
+              </li>
+            </ul>
+          </div>
+          <div id="edit_area">
+              <h2>Choose your color</h2>
+              <div class="square" color-value="#e6e2cf">
+                <div color-value="#e6e2cf" style="background-color:#e6e2cf; border:1px solid black"></div>
+                <div color-value="#dbcaac" style="background-color:#dbcaac;"></div>
+                <div color-value="#c9cbb3" style="background-color:#c9cbb3"></div>
+                <div color-value="#00464B" style="background-color:#00464B"></div>
+                <div color-value="#a6a5b5" style="background-color:#a6a5b5;"></div>
+                <div color-value="#b5a6ab" style="background-color:#b5a6ab;"></div>
+                <div color-value="#eccfcf" style="background-color:#eccfcf;"></div>
+                <div color-value="#eceeeb" style="background-color:#eceeeb;"></div>
+                <div color-value="#bab9b5" style="background-color:#bab9b5;"></div>
+              </div>
+          </div>
+          <div id="edit_area">
+              <button type="button" onclick="sendPostCardAjax(this)">Share Postcards</button>
+          </div>
+      </div>
+
+
+      <div id="footer">
+        <p>Made On Glich!</p>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./fixed-postcard-creator.js"></script>
